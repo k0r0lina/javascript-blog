@@ -85,7 +85,7 @@ function generateTags(){
   for(let article of articles){
 
     /* find tags wrapper */
-    const tagsWrapper = article.querySelector(optArticleTagsSelector);
+    const tagsLink = article.querySelector(optArticleTagsSelector);
     /* make html variable with empty string */
     let html = '';
     /* get tags from data-tags attribute */
@@ -101,7 +101,7 @@ function generateTags(){
     /* END LOOP: for each tag */
     }
     /* insert HTML of all the links into the tags wrapper */
-    tagsWrapper.innerHTML = html;
+    tagsLink.innerHTML = html;
   /* END LOOP: for every article: */
   }
 }
@@ -129,7 +129,7 @@ function tagClickHandler(event){
   /* END LOOP: for each active tag link */
   }
   /* find all tag links with "href" attribute equal to the "href" constant */
-  const tagLinks = document.querySelectorAll('a[href^="#tag-"]');
+  const tagLinks = document.querySelectorAll('[data-tags~="' + tag + '"]');
 
   /* START LOOP: for each found tag link */
   for(let tagLink of tagLinks){
