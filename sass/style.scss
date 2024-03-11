@@ -110,6 +110,23 @@ body {
   }
 }
 
+/* Tags */
+
+.list.tags li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.tag-size-5 {
+  font-size: xx-large;
+}
+.tag-size-3 {
+  font-size: x-large;
+}
+.tag-size-2 {
+  font-size: larger;
+}
+
 /* Authors */
 
 .authors {
